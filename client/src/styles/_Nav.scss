@@ -1,0 +1,40 @@
+nav {
+  min-height: 6vh;
+  background-color: #131314fb;
+
+  .container {
+    width: 85%;
+    margin: 0 auto;
+    @include flex(center, center);
+  }
+
+  .nav-title {
+    flex: 4 1 40rem;
+    padding-left: 3rem;
+    font-family: "Pacifico", cursive;
+    color: #2eb086;
+    font-size: 1.2rem;
+    user-select: none;
+  }
+
+  ul {
+    @include flex(space-around, center);
+    list-style-type: none;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex: 1 1 30rem;
+
+    li {
+      cursor: pointer;
+      color: #5bb9e7fa;
+      letter-spacing: 0.1rem;
+      &:hover {
+        transition: all 50ms ease-in;
+        color: #5ec4f7;
+      }
+    }
+  }
+}

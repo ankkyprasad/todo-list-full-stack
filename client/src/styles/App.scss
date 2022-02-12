@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+$background-color: #171723;
+// #202025fb
+$background-color-2: #202338;
+// #121212f6
+
+@mixin flex($justify, $align, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "Nav";
+@import "Login";
+@import "Footer";
+@import "Register";
+@import "Home";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.invalid-user-error {
+  text-transform: none;
+  letter-spacing: 0;
+  color: #ff2d2d;
+  font-weight: normal;
+}

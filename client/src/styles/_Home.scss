@@ -1,0 +1,117 @@
+.home {
+  min-height: 90vh;
+  background-color: $background-color;
+
+  .container {
+    width: 50%;
+    margin: 0 auto;
+    @include flex(flex-start, center, column);
+
+    color: #f1f1f1;
+
+    .add-task {
+      width: 100%;
+      margin-top: 15rem;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      padding: 0.7rem 1rem;
+      outline: none;
+      background-color: $background-color-2;
+      color: #f1f1f1;
+      font-size: 1rem;
+      border-radius: 6px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ::placeholder {
+      letter-spacing: 1px;
+    }
+
+    .added-tasks {
+      width: 100%;
+      margin-top: 2rem;
+      border-radius: 6px;
+      height: 40vh;
+      overflow-y: auto;
+
+      .task {
+        background-color: $background-color-2;
+        padding: 0.8rem 1rem;
+        border-top: 1px solid #f1f1f13d;
+        @include flex(space-between, center);
+
+        h3 {
+          font-weight: normal;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          // width: 90%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          cursor: pointer;
+          display: inline;
+          user-select: none;
+        }
+
+        .delete {
+          color: #e64d4a;
+          cursor: pointer;
+          font-size: 1.3rem;
+        }
+
+        .completed-task {
+          text-decoration: line-through;
+        }
+
+        &:hover {
+          background-color: #10111fb6;
+        }
+      }
+    }
+
+    .added-tasks::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 10px;
+    }
+
+    .added-tasks::-webkit-scrollbar-track {
+      background: #25283d5b;
+    }
+
+    .added-tasks::-webkit-scrollbar-thumb {
+      background: #3a3f5f;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    .added-tasks::-webkit-scrollbar-thumb:hover {
+      background: #3a3f5fb4;
+    }
+
+    .task-menu-bar {
+      width: 100%;
+    }
+
+    ul {
+      list-style-type: none;
+      @include flex(space-around, center);
+      border-radius: 6px;
+      background-color: $background-color-2;
+      margin: 2.7rem 0;
+      padding: 0.7rem 0;
+      font-size: 1.2rem;
+      user-select: none;
+
+      li {
+        cursor: pointer;
+      }
+
+      .active-task {
+        color: rgb(73, 73, 255);
+      }
+    }
+  }
+}
